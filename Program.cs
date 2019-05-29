@@ -37,7 +37,10 @@ namespace Planner
             city.Add(CoolHome);
             city.Add(BigHouse);
 
-            foreach (Building building in city)
+            CoolHome.Purchase("Hank");
+            FiveOneTwoEigth.Purchase("Angus");
+            BigHouse.Purchase("Meag Mueller");
+            foreach (Building building in city) 
             {
                 building.DisplayDetails();
             }
