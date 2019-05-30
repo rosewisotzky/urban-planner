@@ -39,7 +39,24 @@ namespace Planner
             CoolHome.Purchase("Hank");
             FiveOneTwoEigth.Purchase("Angus");
             BigHouse.Purchase("Meag Mueller");
-            foreach (Building building in city) 
+            // foreach (Building building in city) 
+            // {
+            //     building.DisplayDetails();
+            // }
+
+            City newCity = new City()
+            {
+                CityName = "City of Rose",
+                MayorName = "Rose",
+                YearEst = 2019
+            };
+            newCity.addBuilding(FiveOneTwoEigth);
+            newCity.addBuilding(CoolHome);
+            newCity.addBuilding(BigHouse);
+
+            newCity.DisplayCityDetails();
+            
+            foreach (Building building in newCity.buildingList)
             {
                 building.DisplayDetails();
             }
